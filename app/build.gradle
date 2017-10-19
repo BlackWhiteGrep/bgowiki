@@ -29,5 +29,6 @@ dependencies {
     compile 'com.android.support.constraint:constraint-layout:+'
     testCompile 'junit:junit:4.12'
     compile 'cn.bmob.android:bmob-sdk:3.5.5'
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }
 

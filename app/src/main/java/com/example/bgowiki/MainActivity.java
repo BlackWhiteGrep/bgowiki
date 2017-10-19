@@ -67,7 +67,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             public void onPageSelected(int position) {
                 int currentItem = mViewPager.getCurrentItem();
                 resetImg();
-                switch (currentItem){
+                switch (currentItem) {
                     case 0:
                         mSevemtImg.setImageResource(R.drawable.tab_weixin_pressed);
                         break;
@@ -80,8 +80,8 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
                     case 3:
                         mSettingImg.setImageResource(R.drawable.tab_settings_pressed);
                         break;
-                        default:
-                            break;
+                    default:
+                        break;
 
 
                 }
@@ -140,7 +140,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
 
     @Override
     public void onClick(View v) {
-        switch (v.getId()){
+        switch (v.getId()) {
             case R.id.id_tab_sevent:
                 reselect(0);
                 break;
@@ -153,27 +153,27 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
             case R.id.id_tab_settings:
                 reselect(3);
                 break;
-                default:
-                    break;
+            default:
+                break;
         }
     }
 
     private void reselect(int i) {
         resetImg();
-        switch (i){
+        switch (i) {
             case 0:
                 mSevemtImg.setImageResource(R.drawable.tab_weixin_pressed);
                 break;
             case 1:
                 mFrdImg.setImageResource(R.drawable.tab_find_frd_pressed);
                 break;
-            case 2 :
+            case 2:
                 mAddressImg.setImageResource(R.drawable.tab_address_pressed);
             case 3:
                 mSettingImg.setImageResource(R.drawable.tab_settings_pressed);
                 break;
-                default:
-                    break;
+            default:
+                break;
 
         }
         mViewPager.setCurrentItem(i);
@@ -187,6 +187,6 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
         mSevemtImg.setImageResource(R.drawable.tabweixinnormal);
         mFrdImg.setImageResource(R.drawable.tab_find_frd_normal);
         mAddressImg.setImageResource(R.drawable.tab_address_normal);
-        mSettingImg.setImageResource(R.drawable.tab_settings_normal  );
+        mSettingImg.setImageResource(R.drawable.tab_settings_normal);
     }
 }
