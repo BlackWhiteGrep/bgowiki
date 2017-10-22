@@ -3,17 +3,43 @@
               xmlns:tools="http://schemas.android.com/tools"
               android:layout_width="match_parent"
               android:layout_height="match_parent"
-              android:orientation="vertical" >
+              android:orientation="vertical"
+>
 
     <include layout="@layout/top" />
 
-    <android.support.v4.view.ViewPager
-            android:id="@+id/id_viewpager"
-            android:layout_width="fill_parent"
-            android:layout_height="0dp"
-            android:layout_weight="1" >
-    </android.support.v4.view.ViewPager>
+   <FrameLayout android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:id="@+id/frameLayout"
+   />
+    <RadioGroup android:layout_width="match_parent" android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:orientation="horizontal"
+                android:id="@+id/radioGroup"
+    
+    >
+        <RadioButton             android:id="@+id/sevent"
+                                 style="@style/MainButtonStyle"
+                                 android:drawableTop="@drawable/home_button_selector"
+                                 android:text="@string/sevent" />
+        <RadioButton             android:id="@+id/codding"
+                                 style="@style/MainButtonStyle"
+                                 android:drawableTop="@drawable/type_button_selector"
+                                 android:text="@string/fox" />
+        <RadioButton             android:id="@+id/art"
+                                 style="@style/MainButtonStyle"
+                                 android:drawableTop="@drawable/community_button_selector"
+                                 android:text="@string/act" />
+        <RadioButton             android:id="@+id/count"
+                                 style="@style/MainButtonStyle"
+                                 android:drawableTop="@drawable/cart_button_selector"
+                                 android:text="@string/gap" />
+        <RadioButton             android:id="@+id/mine"
+                                 style="@style/MainButtonStyle"
+                                 android:drawableTop="@drawable/user_button_selector"
+                                 android:text="@string/mine" />
 
-    <include layout="@layout/bottom" />
 
+    </RadioGroup>
 </LinearLayout>

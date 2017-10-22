@@ -5,4 +5,8 @@
     <string name="act">活动一览</string>
     <string name="fox">素材一览</string>
     <string name="titile">混沌の恶</string>
+    <string name="title_activity_welcome">Welcome</string>
+    <string name="gap">素材缺口统计</string>
+    <string name="search">搜索</string>
+    <string name="searchIm">输入搜索信息</string>
 </resources>
