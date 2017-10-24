@@ -1,7 +1,5 @@
 package com.example.bgowiki.home.Fragment;
 
-import android.os.Bundle;
-import android.support.annotation.Nullable;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
 import android.view.View;
@@ -11,10 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 import com.example.bgowiki.R;
 import com.example.bgowiki.base.BaseFragment;
-import com.zhy.http.okhttp.OkHttpUtils;
-import com.zhy.http.okhttp.callback.StringCallback;
-import okhttp3.Call;
-import okhttp3.Request;
 
 import static android.content.ContentValues.TAG;
 
