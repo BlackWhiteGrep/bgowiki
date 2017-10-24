@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bgowiki.iml" filepath="$PROJECT_DIR$/bgowiki.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/bgowiki.iml" filepath="$PROJECT_DIR$/.idea/bgowiki.iml" />
     </modules>
   </component>
