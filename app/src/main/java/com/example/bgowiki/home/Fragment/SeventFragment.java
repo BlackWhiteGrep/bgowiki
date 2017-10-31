@@ -51,7 +51,8 @@ public class SeventFragment extends BaseFragment {
         seventQuickAdapter = new QuickAdapter<Sevent>(getContext(),R.layout.every_sevent) {
             @Override
             protected void convert(BaseAdapterHelper helper, Sevent item) {
-                helper.setText(R.id.tv_sevent_name,item.getName_1());
+                helper.setText(R.id.tv_sevent_name,item.getName_1())
+                .setImageUrl(R.id.iv_sevent_pic,item.getImg_url());
             }
         };
 
