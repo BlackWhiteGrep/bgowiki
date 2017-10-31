@@ -1,68 +1,67 @@
 package com.example.bgowiki.home.Fragment;
 
-import android.support.v7.widget.RecyclerView;
+import android.os.Bundle;
+import android.support.annotation.Nullable;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageView;
-import android.widget.LinearLayout;
-import android.widget.TextView;
-import android.widget.Toast;
+import android.view.ViewGroup;
+import android.widget.ListView;
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 import com.example.bgowiki.R;
+import com.example.bgowiki.adapter.BaseAdapterHelper;
+import com.example.bgowiki.adapter.QuickAdapter;
 import com.example.bgowiki.base.BaseFragment;
+import com.example.bgowiki.home.bean.Sevent;
+
+import java.util.List;
 
 import static android.content.ContentValues.TAG;
 
+
 public class SeventFragment extends BaseFragment {
-    private RecyclerView rvHome;
-    private ImageView ib_top;
-    private TextView tv_search_home;
-    private TextView tv_message_home;
-    private TextView listview;
-    LinearLayout layout_no;
+
+    private ListView lv_show_sevent;
+    private QuickAdapter<Sevent> seventQuickAdapter;
+
+
+    @Nullable
+    @Override
+    public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
+        View view = inflater.inflate(R.layout.sevent, container, false);
+        lv_show_sevent = view.findViewById(R.id.lv_show_sevent);
+        init();
+        return view;
+
+    }
+
+    private void init() {
+        BmobQuery<Sevent> findall = new BmobQuery<>();
+        findall.findObjects(new FindListener<Sevent>() {
+            @Override
+            public void done(List<Sevent> list, BmobException e) {
+                Log.i(TAG, "done: "+list);
+                seventQuickAdapter.addAll(list);
+            }
+
+        });
+
+        seventQuickAdapter = new QuickAdapter<Sevent>(getContext(),R.layout.every_sevent) {
+            @Override
+            protected void convert(BaseAdapterHelper helper, Sevent item) {
+                helper.setText(R.id.tv_sevent_name,item.getName_1());
+            }
+        };
+
+        lv_show_sevent.setAdapter(seventQuickAdapter);
+
+
+    }
 
     @Override
     public View initView() {
-        Log.e(TAG, "主页视图被初始化了");
-        View view = View.inflate(mcontext, R.layout.sevent, null);
-        RecyclerView rvHome = (RecyclerView) view.findViewById(R.id.sevent_home);
-        ib_top = (ImageView) view.findViewById(R.id.ib_top);
-        tv_search_home = (TextView)view.findViewById(R.id.tv_search_home);         
-        tv_message_home = (TextView) view.findViewById(R.id.tv_message_home);
-        initListener();
-        return view;
-    }
-
-
-
-    private void initListener() {
-        //设置顶部监听
-        ib_top.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                rvHome.scrollToPosition(0);
-            }
-        });
-        //设置搜索的监听
-        tv_search_home.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(mcontext, "搜索", Toast.LENGTH_SHORT).show();
-            }
-        });
-        tv_message_home.setOnClickListener(new View.OnClickListener(){
-
-            @Override
-            public void onClick(View v) {
-                Toast.makeText(mcontext, "进入消息中心", Toast.LENGTH_SHORT).show();
-            }
-        });
-
-    }
-
-    @Override
-    public void initDate() {
-        super.initDate();
-
+        return null;
     }
 }
