@@ -52,7 +52,7 @@ public class SeventFragment extends BaseFragment {
             @Override
             protected void convert(BaseAdapterHelper helper, Sevent item) {
                 helper.setText(R.id.tv_sevent_name,item.getName_1())
-                .setImageUrl(R.id.iv_sevent_pic,item.getImg_url());
+                .setImageUrl(R.id.iv_sevent_pic,item.getImg_url()).setText(R.id.tv_sevent_class,item.getJob());
             }
         };
 
