@@ -1,34 +1,30 @@
 package com.example.bgowiki.art.Fragment;
 
-import android.content.Context;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.BaseExpandableListAdapter;
 import android.widget.ExpandableListView;
-import android.widget.TextView;
-import android.widget.Toast;
 
 import com.example.bgowiki.R;
 import com.example.bgowiki.base.BaseFragment;
+import com.example.bgowiki.bean.ArtContentEntity;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
-
-import static android.content.ContentValues.TAG;
 
 public class artFragment extends BaseFragment {
     private ExpandableListView EvExpandableListView;
-    private Map<String, List<String>> dataset = new HashMap<>();
+    private List<String> father_List;// 父层数据
+    private List<List<ArtContentEntity>> list_Son;// 子层数据
+    private int[] img = { R.drawable.ic_launcher };
+
+   /* private Map<String, List<String>> dataset = new HashMap<>();
     private String[] parentList = new String[]{"first", "second", "third"};
     private List<String> childrenList1 = new ArrayList<>();
     private List<String> childrenList2 = new ArrayList<>();
     private List<String> childrenList3 = new ArrayList<>();
-    private MyExpandableListViewAdapter adapter;
+    private MyExpandableListViewAdapter adapter;*/
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -44,29 +40,45 @@ public class artFragment extends BaseFragment {
     }
 
     @Override
+    public View initView() {
+        return null;
+    }
+
+    @Override
     public void onActivityCreated(Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
         EvExpandableListView = getActivity().findViewById(R.id.EvExpandableListView);
 
-        initialData();
+        list_Son = new ArrayList<>();
+        ArtContentEntity contentEntity01 = new ArtContentEntity();
+        contentEntity01.setArtInfo("This is a test1!");
+        contentEntity01.setCount("1111");
+        contentEntity01.setImage(img[0]);
+        contentEntity01.setType(1);
 
-        adapter = new MyExpandableListViewAdapter();
+        List<ArtContentEntity> son_List01 = new ArrayList<>();
+        son_List01.add(contentEntity01);
+
+        // 添加子目录数据
+        list_Son.add(son_List01);
+
+        // 添加父目录数据
+        father_List = new ArrayList<>();
+        father_List.add("TEST1");
+
+        // 数据适配
+        ContentAdapter adapter = new ContentAdapter(this, father_List, list_Son);
         EvExpandableListView.setAdapter(adapter);
+
+        /*initialData();
+        adapter = new MyExpandableListViewAdapter();
+        EvExpandableListView.setAdapter(adapter);*/
 
     }
 
-    private void initialData() {
-        childrenList1.add(parentList[0] + "-" + "first");
-        childrenList1.add(parentList[0] + "-" + "second");
-        childrenList1.add(parentList[0] + "-" + "third");
-        childrenList1.add(parentList[0] + "-" + "first");
-        childrenList1.add(parentList[0] + "-" + "second");
-        childrenList1.add(parentList[0] + "-" + "third");
-        childrenList1.add(parentList[0] + "-" + "first");
-        childrenList1.add(parentList[0] + "-" + "second");
-        childrenList1.add(parentList[0] + "-" + "third");
-        childrenList1.add(parentList[0] + "-" + "first");
+    /*private void initialData() {
+        childrenList1.add(parentList[0] + "-" + "first\n涛妹");
         childrenList1.add(parentList[0] + "-" + "second");
         childrenList1.add(parentList[0] + "-" + "third");
         childrenList2.add(parentList[1] + "-" + "first");
@@ -77,16 +89,16 @@ public class artFragment extends BaseFragment {
         childrenList3.add(parentList[2] + "-" + "third");
         dataset.put(parentList[0], childrenList1);
         dataset.put(parentList[1], childrenList2);
-        dataset.put(parentList[2], childrenList3);
+        dataset.put(parentList[2], childrenList3);*/
     }
 
-    private class MyExpandableListViewAdapter extends BaseExpandableListAdapter {
+            /*private class MyExpandableListViewAdapter extends BaseExpandableListAdapter {
 
-        //  获得某个父项的某个子项
+//  获得某个父项的某个子项
         @Override
         public Object getChild(int parentPos, int childPos) {
             return dataset.get(parentList[parentPos]).get(childPos);
-        }
+    }
 
         //  获得父项的数量
         @Override
@@ -167,22 +179,11 @@ public class artFragment extends BaseFragment {
         }
 
 
-    }
+    }*/
 
 
 
 
 
-    @Override
-    public View initView() {
-        View view = View.inflate(mcontext, R.layout.sevent, null);
-        return view;
 
-    }
 
-    @Override
-    public void initDate() {
-        super.initDate();
-        Log.e(TAG,"数据被初始化了");
-    }
-}
