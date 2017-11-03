@@ -13,23 +13,23 @@
       android:layout_alignParentStart="true"
       android:layout_marginTop="19dp" />
 
-  <TextView
-      android:id="@+id/tvAttack"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignTop="@+id/imgRole"
-      android:layout_marginStart="14dp"
-      android:layout_toEndOf="@+id/imgRole"
-      android:text="攻击：" />
+    <TextView
+        android:id="@+id/tvStar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:text="星级:"
+        android:layout_alignTop="@+id/imgRole"
+        android:layout_toEndOf="@+id/imgRole" />
 
-  <TextView
-      android:id="@+id/tvHp"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignStart="@+id/tvAttack"
-      android:layout_below="@+id/tvAttack"
-      android:layout_marginTop="11dp"
-      android:text="血量：" />
+    <TextView
+        android:id="@+id/tvHp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/tvStar"
+        android:layout_below="@+id/tvStar"
+        android:layout_marginTop="11dp"
+        android:text="阶职:" />
 
     <TextView
         android:id="@+id/tvSpiritBase1"
@@ -205,21 +205,22 @@
         android:layout_toEndOf="@+id/skbSkill3"
         android:text="数值3" />
 
-  <TextView
-      android:id="@+id/tvAttackCount"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignTop="@+id/tvAttack"
-      android:layout_toEndOf="@+id/tvAttack"
-      android:text="攻击数值" />
+    <TextView
+        android:id="@+id/tvStarCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvStar"
+        android:layout_toEndOf="@+id/tvStar"
+        android:text="星级值" />
 
-  <TextView
-      android:id="@+id/tvHpCount"
-      android:layout_width="wrap_content"
-      android:layout_height="wrap_content"
-      android:layout_alignTop="@+id/tvHp"
-      android:layout_toEndOf="@+id/tvHp"
-      android:text="血量数值" />
+    <TextView
+        android:id="@+id/tvJob"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tvHp"
+        android:layout_alignBottom="@+id/tvHp"
+        android:layout_toEndOf="@+id/tvHp"
+        android:text="阶职值" />
 
   <Switch
       android:id="@+id/stcSubscribe"
