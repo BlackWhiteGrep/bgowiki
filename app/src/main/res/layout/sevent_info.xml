@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+  <ImageView
+      android:src="@drawable/ic_launcher"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginStart="29dp"
+      android:id="@+id/imgRole"
+      android:layout_below="@+id/textView23"
+      android:layout_alignParentStart="true"
+      android:layout_marginTop="19dp" />
+
+  <TextView
+      android:id="@+id/tvAttack"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignTop="@+id/imgRole"
+      android:layout_marginStart="14dp"
+      android:layout_toEndOf="@+id/imgRole"
+      android:text="攻击：" />
+
+  <TextView
+      android:id="@+id/tvHp"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignStart="@+id/tvAttack"
+      android:layout_below="@+id/tvAttack"
+      android:layout_marginTop="11dp"
+      android:text="血量：" />
+
+    <TextView
+        android:id="@+id/tvSpiritBase1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="当前灵基"
+        android:layout_alignBottom="@+id/imgRole"
+        android:layout_alignStart="@+id/tvHp" />
+    <ImageView
+        android:src="@drawable/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgSkill1"
+        android:layout_marginTop="23dp"
+        android:layout_below="@+id/edtSpiritBase"
+        android:layout_alignStart="@+id/imgRole" />
+    <ImageView
+        android:src="@drawable/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgSkill2"
+        android:layout_below="@+id/skbSkill1"
+        android:layout_alignStart="@+id/imgSkill1"
+        android:layout_marginTop="23dp" />
+    <ImageView
+        android:src="@drawable/ic_launcher"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imgSkill3"
+        android:layout_above="@+id/tvCalculation"
+        android:layout_alignStart="@+id/imgSkill2"
+        android:layout_marginBottom="24dp" />
+
+    <Button
+        android:id="@+id/tvCalculation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="计算素材"
+        android:layout_marginBottom="17dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/tvSkill1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="技能1"
+        android:layout_alignTop="@+id/imgSkill1"
+        android:layout_alignStart="@+id/tvSpiritBase1"
+        android:layout_marginTop="15dp" />
+
+    <TextView
+        android:id="@+id/tvSkill2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="技能2"
+        android:layout_marginTop="16dp"
+        android:layout_alignTop="@+id/imgSkill2"
+        android:layout_alignStart="@+id/tvSkill1Lv" />
+
+    <TextView
+        android:id="@+id/tvSkill3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="技能3"
+        android:layout_alignTop="@+id/imgSkill3"
+        android:layout_alignStart="@+id/tvSkill2"
+        android:layout_marginTop="16dp" />
+
+    <EditText
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginEnd="18dp"
+        android:layout_alignTop="@+id/tvHp"
+        android:layout_alignParentEnd="true"
+        android:id="@+id/edtSpiritBase" />
+
+    <TextView
+        android:id="@+id/tvSpiritBaseCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="：数值"
+        android:layout_alignBaseline="@+id/tvSpiritBase1"
+        android:layout_alignBottom="@+id/tvSpiritBase1"
+        android:layout_toEndOf="@+id/tvSpiritBase1" />
+
+    <TextView
+        android:id="@+id/tvSpiritBase2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="期望灵基:"
+        android:layout_alignBaseline="@+id/tvSpiritBaseCount"
+        android:layout_alignBottom="@+id/tvSpiritBaseCount"
+        android:layout_toStartOf="@+id/edtSpiritBase" />
+
+    <TextView
+        android:id="@+id/tvSkill1Lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="技能等级"
+        android:layout_alignBottom="@+id/imgSkill1"
+        android:layout_alignStart="@+id/tvSkill1" />
+
+    <TextView
+        android:id="@+id/tvSkill2Lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="技能等级"
+        android:layout_alignBottom="@+id/imgSkill2"
+        android:layout_alignStart="@+id/tvSkill3" />
+
+    <TextView
+        android:id="@+id/tvSkill3Lv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/imgSkill3"
+        android:layout_alignStart="@+id/tvSkill3"
+        android:text="技能等级" />
+
+    <TextView
+        android:id="@+id/textView23"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignStart="@+id/imgRole"
+        android:layout_marginTop="13dp"
+        android:textSize="18dp"
+        android:text="人物名称" />
+
+    <SeekBar
+        android:id="@+id/skbSkill1"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvSkill1Lv"
+        android:layout_toEndOf="@+id/tvSkill2Lv" />
+
+    <TextView
+        android:id="@+id/tvSkill1LvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/skbSkill1"
+        android:layout_toEndOf="@+id/skbSkill1"
+        android:text="数值1" />
+
+    <SeekBar
+        android:id="@+id/skbSkill2"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvSkill2Lv"
+        android:layout_toStartOf="@+id/tvSkill1LvCount" />
+
+    <TextView
+        android:id="@+id/tvSkill2LvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/skbSkill2"
+        android:layout_toEndOf="@+id/skbSkill2"
+        android:text="数值2" />
+
+    <SeekBar
+        android:id="@+id/skbSkill3"
+        android:layout_width="160dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/tvSkill3Lv"
+        android:layout_toStartOf="@+id/tvSkill2LvCount" />
+
+    <TextView
+        android:id="@+id/tvSkill3LvCount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/skbSkill3"
+        android:layout_toEndOf="@+id/skbSkill3"
+        android:text="数值3" />
+
+  <TextView
+      android:id="@+id/tvAttackCount"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignTop="@+id/tvAttack"
+      android:layout_toEndOf="@+id/tvAttack"
+      android:text="攻击数值" />
+
+  <TextView
+      android:id="@+id/tvHpCount"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_alignTop="@+id/tvHp"
+      android:layout_toEndOf="@+id/tvHp"
+      android:text="血量数值" />
+
+  <Switch
+      android:id="@+id/stcSubscribe"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:text="关注"
+      android:layout_alignParentTop="true"
+      android:layout_alignParentEnd="true" />
+
+</RelativeLayout>
