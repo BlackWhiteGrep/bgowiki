@@ -19,12 +19,12 @@ import com.example.bgowiki.bean.GroupData;
 
 import java.util.List;
 
-class MyExpandableListViewAdapter implements ExpandableListAdapter {
+ class MyExpandableListViewAdapter implements ExpandableListAdapter {
         private artFragment context;
         private List<GroupData> groupData;
         private List<List<ChildData>> childData;
 
-        public MyExpandableListViewAdapter(artFragment context, List<GroupData> groupData, List<List<ChildData>> childData) {
+        MyExpandableListViewAdapter(artFragment context, List<GroupData> groupData, List<List<ChildData>> childData) {
             this.context = context;
             this.groupData = groupData;
             this.childData = childData;

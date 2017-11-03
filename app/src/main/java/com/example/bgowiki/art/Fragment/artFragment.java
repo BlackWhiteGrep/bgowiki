@@ -139,7 +139,7 @@ public class artFragment extends BaseFragment {
             List<ChildData> list = new ArrayList<>();
             for (int j = 0; j < 2 * i + 2; j++) {
                 ChildData cd ;
-                if (i == 0) {
+               /* if (i == 0) {
                     cd = new ChildData("null", "我的手机", "上次登录");
                     list.add(cd);
                     cd = new ChildData("null", "发现新设备", "玩转只能信设备，发现新生活");
@@ -149,6 +149,52 @@ public class artFragment extends BaseFragment {
                     cd = new ChildData(url[j % url.length], "张三" + j, "你好！！！");
                     list.add(cd);
                 }
+                */
+               switch (i){
+                   case 0:
+                       cd= new ChildData(url[1],"涛妹1","朝鲜火箭");
+                       list.add(cd);
+                       cd = new ChildData(url[1],"涛妹2","朝鲜火箭");
+                       list.add(cd);
+                       cd = new ChildData(url[1],"涛妹3","朝鲜火箭");
+                       list.add(cd);
+                       cd = new ChildData(url[1],"涛妹4","朝鲜火箭");
+                       list.add(cd);
+                       break;
+
+                   case 1:
+                       cd = new ChildData(url[1],"涛妹","朝鲜火箭");
+                       list.add(cd);
+                       cd = new ChildData(url[1],"涛妹","朝鲜火箭");
+                       list.add(cd);
+                       cd = new ChildData(url[1],"涛妹","朝鲜火箭");
+                       list.add(cd);
+                       cd = new ChildData(url[1],"涛妹","朝鲜火箭");
+                       list.add(cd);
+                       break;
+                   case 2:
+                       cd = new ChildData(url[1],"涛妹","朝鲜火箭");
+                       list.add(cd);
+                       cd = new ChildData(url[1],"涛妹","朝鲜火箭");
+                       list.add(cd);
+                       cd = new ChildData(url[1],"涛妹","朝鲜火箭");
+                       list.add(cd);
+                       cd = new ChildData(url[1],"涛妹","朝鲜火箭");
+                       list.add(cd);
+                       break;
+                   case 3:
+                       cd = new ChildData(url[1],"涛妹","朝鲜火箭");
+                       list.add(cd);
+                       cd = new ChildData(url[1],"涛妹","朝鲜火箭");
+                       list.add(cd);
+                       cd = new ChildData(url[1],"涛妹","朝鲜火箭");
+                       list.add(cd);
+                       cd = new ChildData(url[1],"涛妹","朝鲜火箭");
+                       list.add(cd);
+                       break;
+
+
+               }
             }
             childList.add(list);
         }

@@ -35,6 +35,8 @@
                 android:label="MainActivity"
                 android:theme="@style/AppTheme.NoActionBar">
         </activity>
+        <activity android:name=".activity.seventInfoActivity">
+        </activity>
     </application>
 
 </manifest>
