@@ -5,18 +5,14 @@
     android:orientation="horizontal"
     android:padding="10dp">
 
-    <ImageView
-        android:id="@+id/img_group"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:scaleType="fitXY" />
-
     <TextView
         android:id="@+id/tv_group_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
-        android:textSize="16sp" />
+        android:textSize="16sp"
+        android:layout_weight="1"
+        />
 
     <TextView
         android:id="@+id/tv_group_num"
@@ -24,4 +20,10 @@
         android:layout_height="wrap_content"
         android:layout_marginLeft="10dp"
         android:textSize="16sp" />
+
+    <CheckBox
+        android:id="@+id/ckbArt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="false" />
 </LinearLayout>
