@@ -59,18 +59,22 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/imgSkill3"
-        android:layout_above="@+id/tvCalculation"
-        android:layout_alignStart="@+id/imgSkill2"
-        android:layout_marginBottom="24dp" />
+        android:layout_marginTop="9dp"
+        android:layout_below="@+id/tvSkill2LvCount"
+        android:layout_alignLeft="@+id/imgSkill2"
+        android:layout_alignStart="@+id/imgSkill2" />
 
     <Button
         android:id="@+id/tvCalculation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="计算素材"
-        android:layout_marginBottom="17dp"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/imgSkill3"
+        android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
+        android:layout_marginTop="35dp"
+        android:layout_toStartOf="@+id/tvSkill3Lv"
+        android:layout_alignParentRight="true"
         android:layout_alignParentEnd="true" />
 
     <TextView

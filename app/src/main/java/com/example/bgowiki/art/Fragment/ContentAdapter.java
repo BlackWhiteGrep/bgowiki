@@ -104,11 +104,12 @@ class MyExpandableListViewAdapter implements ExpandableListAdapter {
         public View getGroupView(final int groupPosition, boolean isExpanded, View convertView, ViewGroup parent) {
             GroupViewHolder holder = null;
             if (convertView == null) {
-                convertView = LayoutInflater.from(context.getContext()).inflate(R.layout.art_parent_item, null);
-                holder = new GroupViewHolder();
-                holder.tv_name = (TextView) convertView.findViewById(R.id.tv_group_name);
-                holder.ckbArt= convertView.findViewById(R.id.ckbArt);
-                convertView.setTag(holder);
+                        convertView = LayoutInflater.from(context.getContext()).inflate(R.layout.art_parent_item, null);
+                        holder = new GroupViewHolder();
+                        holder.tv_name = (TextView) convertView.findViewById(R.id.tv_group_name);
+                        holder.ckbArt = convertView.findViewById(R.id.ckbArt);
+                        convertView.setTag(holder);
+
             } else {
                 holder = (GroupViewHolder) convertView.getTag();
             }
@@ -179,8 +180,7 @@ class MyExpandableListViewAdapter implements ExpandableListAdapter {
         }
 
         class GroupViewHolder {
-            ImageView img;
-            TextView tv_name, tv_num;
+            TextView tv_name;
             CheckBox ckbArt;
         }
 
