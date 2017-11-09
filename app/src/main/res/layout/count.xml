@@ -4,12 +4,9 @@
     android:layout_height="match_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:gravity="center"
-        android:text="This is Settings Tab"
-        android:textSize="30sp"
-        android:textStyle="bold" />
+    <ListView
+            android:id="@+id/lv_show_sevent"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent" />
 
 </LinearLayout>
