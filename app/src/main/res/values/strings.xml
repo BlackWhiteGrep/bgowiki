@@ -9,4 +9,25 @@
     <string name="gap">素材缺口统计</string>
     <string name="search">搜索</string>
     <string name="searchIm">输入搜索信息</string>
+    <string name="classone">阶职:</string>
+    <string name="dq">当前等级</string>
+    <string name="mb">目标等级</string>
+    <string-array name="lingji">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+    </string-array>
+    <string-array name="Skill">
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+    </string-array>
 </resources>
