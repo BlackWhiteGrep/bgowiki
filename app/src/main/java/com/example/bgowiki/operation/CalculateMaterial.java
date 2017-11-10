@@ -15,8 +15,8 @@ import java.util.Map;
 public class CalculateMaterial {
     public Map<String,Integer>CalMaterials(int current_level, int level_up, String sevent_id) {
         Map map = (Map) JSONObject.parse(MaterialUtils.json);
-        Map sevent_map = (Map) map.get(sevent_id);
-        List levels = (List) sevent_map.get("levels");
+        //Map sevent_map = (Map) map.get(sevent_id);
+        List levels = (List) map.get(sevent_id);
         //先把levels的list转化为bean对象的list
         List<Material_calculate> level_material = new ArrayList<>();
         for (Object i : levels) {
