@@ -91,7 +91,7 @@
           android:layout_height="wrap_content"
           android:id="@+id/tvSkill1"
           android:layout_alignTop="@+id/imgSkill1" android:layout_toRightOf="@+id/imgSkill1"
-          android:layout_alignRight="@+id/textView10" android:layout_alignEnd="@+id/textView10"/>
+          android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
   <TextView
           android:text="@string/dq"
           android:textSize="20sp"
@@ -112,8 +112,8 @@
           android:textSize="20sp"
           android:layout_height="wrap_content" android:layout_alignTop="@+id/imgSkill2"
           android:layout_toRightOf="@+id/imgSkill2"
-          android:id="@+id/tvSkill2" android:layout_alignRight="@+id/textView13"
-          android:layout_alignEnd="@+id/textView13" android:text="技能2"/>
+          android:id="@+id/tvSkill2"
+          android:text="技能2" android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
   <TextView
           android:text="@string/dq"
           android:textSize="20sp"
@@ -135,8 +135,8 @@
           android:layout_width="wrap_content"
           android:layout_height="wrap_content" android:layout_alignTop="@+id/imgSkill3"
           android:layout_toRightOf="@+id/imgSkill3"
-          android:id="@+id/tvSkill3" android:layout_alignRight="@+id/textView16"
-          android:layout_alignEnd="@+id/textView16"/>
+          android:id="@+id/tvSkill3"
+          android:layout_alignParentRight="true" android:layout_alignParentEnd="true"/>
     <TextView
             android:text="@string/dq"
             android:textSize="20sp"
@@ -164,48 +164,42 @@
             android:layout_width="match_parent"
             android:entries="@array/lingji"
             android:layout_height="wrap_content" android:layout_alignTop="@+id/textView10"
-            android:layout_toEndOf="@+id/textView10"
-            android:id="@+id/spinner2" android:layout_alignLeft="@+id/spinner3"
-            android:layout_alignStart="@+id/spinner3"/>
+            android:layout_toEndOf="@+id/tvJob"
+            android:id="@+id/spinner2"
+            android:layout_toRightOf="@+id/tvJob"/>
     <Spinner
             android:layout_width="match_parent"
             android:entries="@array/Skill"
             android:layout_height="wrap_content" android:layout_alignTop="@+id/textView12"
             android:layout_toEndOf="@+id/textView12"
-            android:id="@+id/spinner3" android:layout_alignLeft="@+id/spinner4"
-            android:layout_alignStart="@+id/spinner4"/>
+            android:id="@+id/spinner3"
+            android:layout_alignLeft="@+id/spinner2" android:layout_alignStart="@+id/spinner2"/>
     <Spinner
             android:layout_width="match_parent"
             android:entries="@array/Skill"
             android:layout_height="wrap_content" android:layout_alignTop="@+id/textView13"
             android:layout_toEndOf="@+id/textView13"
-            android:id="@+id/spinner4" android:layout_alignLeft="@+id/spinner5"
-            android:layout_alignStart="@+id/spinner5"/>
+            android:id="@+id/spinner4"
+            android:layout_alignLeft="@+id/spinner3" android:layout_alignStart="@+id/spinner3"/>
     <Spinner
             android:layout_width="match_parent"
             android:entries="@array/Skill"
             android:layout_height="wrap_content"
             android:id="@+id/spinner5" android:layout_alignBottom="@+id/textView15"
-            android:layout_alignLeft="@+id/spinner7" android:layout_alignStart="@+id/spinner7"/>
+            android:layout_alignLeft="@+id/spinner4" android:layout_alignStart="@+id/spinner4"/>
     <Spinner
             android:entries="@array/Skill"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_alignTop="@+id/textView16"
-            android:layout_toEndOf="@+id/textView16"
-            android:id="@+id/spinner6" android:layout_alignLeft="@+id/spinner7"
-            android:layout_alignStart="@+id/spinner7"/>
-    <Spinner
-            android:entries="@array/Skill"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" android:layout_alignTop="@+id/tvSkill3"
-            android:layout_toRightOf="@+id/tvSkill3" android:layout_toEndOf="@+id/tvSkill3"
-            android:layout_marginLeft="37dp" android:layout_marginStart="37dp" android:id="@+id/spinner7"/>
+            android:layout_height="wrap_content"
+            android:id="@+id/spinner6"
+            android:layout_alignTop="@+id/textView16" android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true" android:layout_alignLeft="@+id/spinner5"
+            android:layout_alignStart="@+id/spinner5"/>
     <Spinner
             android:entries="@array/Skill"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:layout_alignTop="@+id/textView18"
-            android:layout_alignLeft="@+id/spinner7" android:layout_alignStart="@+id/spinner7"
-            android:id="@+id/spinner8"/>
+            android:id="@+id/spinner8" android:layout_toRightOf="@+id/button" android:layout_toEndOf="@+id/button"/>
     <Spinner
             android:entries="@array/Skill"
             android:layout_width="match_parent"
@@ -213,7 +207,8 @@
             android:layout_alignLeft="@+id/spinner8" android:layout_alignStart="@+id/spinner8"
             android:id="@+id/spinner9"/>
     <Button
-            android:text="Button"
+            android:text="添加到我的规划"
+            android:textSize="15sp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content" android:layout_below="@+id/imgSkill3"
             android:id="@+id/button"
