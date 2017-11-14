@@ -23,10 +23,13 @@
                                  style="@style/MainButtonStyle"
                                  android:drawableTop="@drawable/home_button_selector"
                                  android:text="@string/sevent" />
-        <RadioButton             android:id="@+id/codding"
-                                 style="@style/MainButtonStyle"
-                                 android:drawableTop="@drawable/type_button_selector"
-                                 android:text="@string/fox" />
+
+        <RadioButton
+            android:id="@+id/codding"
+            style="@style/MainButtonStyle"
+            android:drawableTop="@drawable/type_button_selector"
+            android:text="@string/fox" />
+
         <RadioButton             android:id="@+id/art"
                                  style="@style/MainButtonStyle"
                                  android:drawableTop="@drawable/community_button_selector"

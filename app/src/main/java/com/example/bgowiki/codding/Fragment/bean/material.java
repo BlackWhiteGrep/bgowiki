@@ -1,6 +1,8 @@
 package com.example.bgowiki.codding.Fragment.bean;
 
-public class material {
+import cn.bmob.v3.BmobObject;
+
+public class material extends BmobObject{
     private String material_name;
     private String material_imgString;
 

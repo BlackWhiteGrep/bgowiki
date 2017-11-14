@@ -9,9 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ListView;
-import cn.bmob.v3.BmobQuery;
-import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.FindListener;
+
 import com.example.bgowiki.R;
 import com.example.bgowiki.activity.seventInfoActivity;
 import com.example.bgowiki.adapter.BaseAdapterHelper;
@@ -20,6 +18,10 @@ import com.example.bgowiki.base.BaseFragment;
 import com.example.bgowiki.home.bean.Sevent;
 
 import java.util.List;
+
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 
 import static android.content.ContentValues.TAG;
 
@@ -56,7 +58,8 @@ public class SeventFragment extends BaseFragment implements AdapterView.OnItemCl
             @Override
             protected void convert(BaseAdapterHelper helper, Sevent item) {
                 helper.setText(R.id.tv_sevent_name,item.getName_1())
-                .setImageUrl(R.id.iv_sevent_pic,item.getImg_url()).setText(R.id.tv_sevent_class,item.getJob());
+                .setImageUrl(R.id.iv_sevent_pic,item.getImg_url())
+                        .setText(R.id.tv_sevent_class,item.getJob());
             }
         };
 

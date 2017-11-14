@@ -6,8 +6,7 @@ import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentTransaction;
 import android.widget.FrameLayout;
 import android.widget.RadioGroup;
-import butterknife.Bind;
-import butterknife.ButterKnife;
+
 import com.example.bgowiki.R;
 import com.example.bgowiki.art.Fragment.artFragment;
 import com.example.bgowiki.base.BaseFragment;
@@ -17,6 +16,9 @@ import com.example.bgowiki.home.Fragment.SeventFragment;
 import com.example.bgowiki.mine.Fragment.mineFragment;
 
 import java.util.ArrayList;
+
+import butterknife.Bind;
+import butterknife.ButterKnife;
 
 public class MainActivity extends FragmentActivity {
 

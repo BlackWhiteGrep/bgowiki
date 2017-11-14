@@ -1,31 +1,32 @@
 package com.example.bgowiki.codding.Fragment;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.*;
-import cn.bmob.v3.BmobQuery;
-import cn.bmob.v3.exception.BmobException;
-import cn.bmob.v3.listener.FindListener;
+import android.widget.AdapterView;
+import android.widget.ListView;
+
 import com.example.bgowiki.R;
 import com.example.bgowiki.adapter.BaseAdapterHelper;
 import com.example.bgowiki.adapter.QuickAdapter;
 import com.example.bgowiki.base.BaseFragment;
 import com.example.bgowiki.codding.Fragment.bean.material;
+import com.example.bgowiki.material.info.MaterialInfoActivity;
 
 import java.util.List;
 
-import static android.content.ContentValues.TAG;
+import cn.bmob.v3.BmobQuery;
+import cn.bmob.v3.exception.BmobException;
+import cn.bmob.v3.listener.FindListener;
 
 public class coddingFragment extends BaseFragment implements AdapterView.OnItemClickListener {
-    private TextView textView;
     private ListView lv_show_material;
     private QuickAdapter<material> materialQuickAdapter;
     private List<material> save_list;
-
 
     @Nullable
     @Override
@@ -41,7 +42,6 @@ public class coddingFragment extends BaseFragment implements AdapterView.OnItemC
         findall.findObjects(new FindListener<material>() {
             @Override
             public void done(List<material> list, BmobException e) {
-                Log.i(TAG, "done: "+list);
                 materialQuickAdapter.addAll(list);
                 save_list = list;
             }
@@ -55,6 +55,7 @@ public class coddingFragment extends BaseFragment implements AdapterView.OnItemC
             }
         };
         lv_show_material.setAdapter(materialQuickAdapter);
+        lv_show_material.setOnItemClickListener(this);
     }
 
     @Override
@@ -64,6 +65,15 @@ public class coddingFragment extends BaseFragment implements AdapterView.OnItemC
 
     @Override
     public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
+        material material=save_list.get(position);
+        String objectId=material.getObjectId();
+        Intent intent = new Intent(getContext().getApplicationContext(),MaterialInfoActivity.class);
+        Bundle b = new Bundle();
+        b.putString("objectId",material.getObjectId());
+        intent.putExtras(b);
+        Log.e("AAA", "onItemClick: "+objectId+","+b);
+        getActivity().startActivity(intent);
     }
+
+
 }
