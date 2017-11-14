@@ -22,7 +22,7 @@ public class MakeThreeMapToOne {
         //添加map b到map
         for (String MaterialName_B:b.keySet()){
             if (map.containsKey(MaterialName_B)){
-                map.put(MaterialName_B,map.get(MaterialName_B)+a.get(MaterialName_B));
+                map.put(MaterialName_B,map.get(MaterialName_B)+b.get(MaterialName_B));
             }else {
                 map.put(MaterialName_B,b.get(MaterialName_B));
             }
@@ -30,7 +30,7 @@ public class MakeThreeMapToOne {
         //添加map c到map
         for (String MaterialName_C:c.keySet()){
             if (map.containsKey(MaterialName_C)){
-                map.put(MaterialName_C,map.get(MaterialName_C)+a.get(MaterialName_C));
+                map.put(MaterialName_C,map.get(MaterialName_C)+c.get(MaterialName_C));
             }else {
                 map.put(MaterialName_C,c.get(MaterialName_C));
             }
