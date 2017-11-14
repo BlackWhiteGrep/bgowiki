@@ -15,5 +15,6 @@
 
             android:layout_width="match_parent"
             android:layout_height="70dp" android:id="@+id/material_name"
+            android:layout_alignParentTop="true"
             android:layout_toRightOf="@+id/material_Img" android:layout_toEndOf="@+id/material_Img"/>
 </RelativeLayout>

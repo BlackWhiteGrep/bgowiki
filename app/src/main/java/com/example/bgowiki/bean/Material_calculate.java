@@ -1,4 +1,9 @@
 package com.example.bgowiki.bean;
+
+import android.os.Parcelable;
+
+import java.io.Serializable;
+
 /**
  * Created by papadave on 2017/11/8.
  */

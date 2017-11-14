@@ -27,7 +27,7 @@ public class artFragment extends BaseFragment {
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
-        // TODO Auto-generated method stub
+
         super.onCreate(savedInstanceState);
         setHasOptionsMenu(true);
     }
