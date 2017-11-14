@@ -39,7 +39,7 @@ public class countFragment extends BaseFragment {
         View view = inflater.inflate(R.layout.count,container,false);
         lv_show_count = view.findViewById(R.id.lv_materia_show);
         initBundle();
-        init();
+     //   init();
         return view;
     }
 
