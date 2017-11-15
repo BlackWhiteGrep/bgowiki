@@ -37,9 +37,10 @@ public class countFragment extends BaseFragment {
     @Override
     public View onCreateView(LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.count,container,false);
-        lv_show_count = view.findViewById(R.id.lv_materia_show);
+        lv_show_count = view.findViewById(R.id.lv_show_count);
         initBundle();
-     //   init();
+        Log.e(TAG, "onCreateView: "+view.getId() );
+        init();
         return view;
     }
 
@@ -67,15 +68,21 @@ public class countFragment extends BaseFragment {
     }
 
     private void init() {
-        materialQuickAdapter.addAll(TotalList);
-        materialQuickAdapter = new QuickAdapter<Material_calculate>(getContext(),R.layout.erey_count) {
-            @Override
-            protected void convert(BaseAdapterHelper helper, Material_calculate item) {
-                helper.setText(R.id.lv_material_name,item.getMaterial());
-                helper.setText(R.id.lv_need_material, String.valueOf(item.getMaterial_count()));
-            }
-        };
-        lv_show_count.setAdapter(materialQuickAdapter);
+        if(TotalList!= null) {
+            System.out. println(TotalList);
+            Log.e(TAG,"done"+TotalList);
+
+            materialQuickAdapter = new QuickAdapter<Material_calculate>(getContext(), R.layout.erey_count) {
+                @Override
+                protected void convert(BaseAdapterHelper helper, Material_calculate item) {
+                    helper.setText(R.id.lv_material_name, item.getMaterial());
+                    helper.setText(R.id.lv_material_name_need, String.valueOf(item.getMaterial_count()));
+                }
+            };
+            System.out. println(materialQuickAdapter);
+            materialQuickAdapter.addAll(TotalList);
+            lv_show_count.setAdapter(materialQuickAdapter);
+        }
     }
 
 

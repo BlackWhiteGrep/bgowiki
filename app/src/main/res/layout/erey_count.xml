@@ -1,36 +1,43 @@
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
                android:layout_width="fill_parent"
-                android:layout_height="40dp"
+                android:layout_weight="4"
+                android:layout_height="50dp"
 
 >
 
     <TextView
             android:text="材料名称"
-            android:layout_width="wrap_content"
-            android:layout_weight="1"
+            android:layout_width="100dp"
             android:gravity="center"
             android:textSize="20sp"
             style="@style/AppTheme"
-            android:layout_height="40dp" android:id="@+id/lv_material_name"/>
+            android:layout_height="50dp" android:id="@+id/lv_material_name"/>
     <TextView
             android:text="所需材料"
             android:gravity="center"
             android:textSize="20sp"
             style="@style/AppTheme"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp" android:id="@+id/lv_material_name_need" android:layout_weight="1"/>
+            android:layout_width="100dp"
+            android:layout_height="50dp" android:id="@+id/lv_material_name_need"
+            android:layout_alignParentTop="true" android:layout_toRightOf="@+id/lv_material_name"
+            android:layout_toEndOf="@+id/lv_material_name"/>
     <EditText
             android:text=""
             android:gravity="center"
             android:textSize="20sp"
             style="@style/AppTheme"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp" android:id="@+id/et_material" android:layout_weight="1"/>
+            android:layout_width="80dp"
+            android:layout_height="50dp" android:id="@+id/et_material"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/lv_material_name_need" android:layout_toLeftOf="@+id/lv_need_material"
+            android:layout_toStartOf="@+id/lv_need_material"/>
     <TextView
-            android:text="仍需求"
+            android:text=""
             android:gravity="center"
             android:textSize="20sp"
             style="@style/AppTheme"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp" android:id="@+id/lv_need_material" android:layout_weight="1"/>
-</LinearLayout>
+            android:layout_width="100dp"
+            android:layout_height="50dp" android:id="@+id/lv_need_material"
+            android:layout_alignParentTop="true" android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"/>
+</RelativeLayout>

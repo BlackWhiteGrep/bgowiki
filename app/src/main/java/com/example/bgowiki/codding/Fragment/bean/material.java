@@ -4,7 +4,7 @@ import cn.bmob.v3.BmobObject;
 
 public class material extends BmobObject{
     private String material_name;
-    private String material_imgString;
+    private String material_ImgString;
 
     public String getMaterial_name() {
         return material_name;
@@ -14,11 +14,11 @@ public class material extends BmobObject{
         this.material_name = material_name;
     }
 
-    public String getMaterial_imgString() {
-        return material_imgString;
+    public String getMaterial_ImgString() {
+        return material_ImgString;
     }
 
-    public void setMaterial_imgString(String material_imgString) {
-        this.material_imgString = material_imgString;
+    public void setMaterial_ImgString(String material_ImgString) {
+        this.material_ImgString = material_ImgString;
     }
 }

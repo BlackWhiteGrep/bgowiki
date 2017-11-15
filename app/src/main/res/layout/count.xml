@@ -8,8 +8,9 @@
     <include layout="@layout/count_top"/>
 
     <ListView
-            android:id="@+id/l"
+            android:id="@+id/lv_show_count"
             android:layout_width="wrap_content"
-            android:layout_height="268dp" android:layout_weight="1.22"/>
+            android:layout_height="match_parent"
+            android:layout_weight="1.22"/>
 
 </LinearLayout>

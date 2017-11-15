@@ -50,7 +50,7 @@ public class coddingFragment extends BaseFragment implements AdapterView.OnItemC
         materialQuickAdapter = new QuickAdapter<material>(getContext(),R.layout.material) {
             @Override
             protected void convert(BaseAdapterHelper helper, material item) {
-                helper.setImageUrl(R.id.material_Img,item.getMaterial_imgString())
+                helper.setImageUrl(R.id.material_Img,item.getMaterial_ImgString())
                         .setText(R.id.material_name,item.getMaterial_name());
             }
         };
